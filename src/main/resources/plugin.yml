@@ -1,0 +1,6 @@
+name: AdvancedShops
+version: '${version}'
+
+main: pl.kiosel.core.advancedShops.AdvancedShops
+api-version: '1.18'
+load: POSTWORLD

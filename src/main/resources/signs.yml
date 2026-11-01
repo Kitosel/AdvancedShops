@@ -1,0 +1,11 @@
+enabled: true
+# The paid sign becomes a powered stone button, then returns. 20 ticks = 1 second.
+# Supported range: 1-1200 ticks. Use dry wall/standing signs on full solid blocks.
+pulse-ticks: 20
+# If it is true, no one can destroy the sign except its owner
+only-owner-can-destroy: true
+
+sign-header: "[Pay]"
+sgin-header-color: "GREEN"
+sign-price: "%amount%"
+sign-hint: "Right-click"
