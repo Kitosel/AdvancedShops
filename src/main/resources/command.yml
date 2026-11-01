@@ -1,0 +1,24 @@
+# Root name and aliases require a server restart. Subcommand names and arguments support reload.
+# Use unique subcommand names; on and off must have different values.
+command:
+  name: advancedshop
+  aliases:
+    - shop
+    - shops
+
+command-language:
+  create: create
+  remove: remove
+  edit: edit
+  list: list
+  reload: reload
+  cancel: cancel
+  status: status
+  information: info
+  settings: settings
+  notification: notification
+
+  admin: admin
+
+  on: on
+  off: off

@@ -3,15 +3,15 @@ package pl.kiosel.advancedshops.api.events;
 import lombok.Getter;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
-import pl.kiosel.advancedshops.data.shop.Shop;
+import pl.kiosel.advancedshops.data.shop.ShopChest;
 
-public class ShopStatusChangeEvent extends ShopEvent implements Cancellable {
+public class ShopsChestStatusChangeEvent extends ShopsChestEvent implements Cancellable {
 
 	private boolean cancelled;
 	@Getter private final boolean enabled;
 
-	public ShopStatusChangeEvent(Shop shop, Player player, boolean enabled) {
-		super(shop, player);
+	public ShopsChestStatusChangeEvent(ShopChest shopChest, Player player, boolean enabled) {
+		super(shopChest, player);
 		this.enabled = enabled;
 	}
 

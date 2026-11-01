@@ -1,0 +1,70 @@
+name: '${project.name}'
+version: '${project.version}'
+main: pl.kiosel.advancedshops.AdvancedShops
+author: Kiosel
+
+api-version: '1.19'
+
+dependencies:
+  server:
+    Vault:
+      load: BEFORE
+      required: false
+    Essentials:
+      load: BEFORE
+      required: false
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
+    PlayerPoints:
+      load: BEFORE
+      required: false
+    WorldEdit:
+      load: BEFORE
+      required: false
+    WorldGuard:
+      load: BEFORE
+      required: false
+
+permissions:
+  advancedshops.admin:
+    default: op
+    children:
+      advancedshops.use: true
+      advancedshops.create: true
+      advancedshops.edit: true
+      advancedshops.adminshop: true
+      advancedshops.remove: true
+      advancedshops.status: true
+      advancedshops.notifications: true
+      advancedshops.settings: true
+      advancedshops.reload: true
+      advancedshops.sign.create: true
+      advancedshops.sign.use: true
+      advancedshops.sign.admin: true
+
+  advancedshops.use:
+    default: true
+  advancedshops.create:
+    default: true
+  advancedshops.edit:
+    default: true
+  advancedshops.remove:
+    default: true
+  advancedshops.status:
+    default: true
+  advancedshops.notifications:
+    default: true
+  advancedshops.settings:
+    default: op
+  advancedshops.reload:
+    default: op
+  advancedshops.adminshop:
+    default: op
+
+  advancedshops.sign.create:
+    default: true
+  advancedshops.sign.use:
+    default: true
+  advancedshops.sign.admin:
+    default: op

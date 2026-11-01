@@ -5,19 +5,19 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
-import pl.kiosel.advancedshops.data.shop.Shop;
+import pl.kiosel.advancedshops.data.shop.ShopChest;
 
-public class ShopEvent extends Event {
+public class ShopsChestEvent extends Event {
 
 	private static final HandlerList handlers = new HandlerList();
 
 	@Getter
-	private final Shop shop;
+	private final ShopChest shopChest;
 	@Getter
 	private final Player player;
 
-	public ShopEvent(Shop shop, Player player) {
-		this.shop = shop;
+	public ShopsChestEvent(ShopChest shopChest, Player player) {
+		this.shopChest = shopChest;
 		this.player = player;
 	}
 

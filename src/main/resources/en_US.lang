@@ -1,0 +1,246 @@
+prefix: "&8[&f&lAdvanced&d&lShops&r&8]&r"
+
+general:
+  no-permission: "&cYou do not have permission."
+  no-money: "&cYou do not have enough money."
+  owner-no-money: "&cThe shop owner does not have enough money."
+  withdraw: "&6You were withdrawn &a%price% &6to create this shop."
+
+  new-version: "&7New plugin version available &e%version% &b%download%"
+  download: "Click to download"
+
+command:
+  no-permission: "&cYou do not have permission to use this command."
+  player-only: "&cThis command can only be used in game."
+  unavailable: "&cThis command is currently unavailable."
+  unknown: "&cUnknown command. &7Use &f/%label% &7to view help."
+  usage: "&7Usage &8» &f%usage%"
+  reload: "&aConfiguration and messages reloaded. &7Database and root command changes require a restart."
+  reload-failed: "&cReload failed. &7Check the server log; the previous language remains active if its replacement failed."
+  cancel: "&7Container selection canceled."
+  descriptions:
+    create: "Create a shop using the item in your hand"
+    list: "Browse your shops or admin shops"
+    info: "View the item, prices, stock and location"
+    status: "Open or close a shop"
+    notification: "Toggle transaction notifications for all your shops"
+    remove: "Remove a shop and keep its contents"
+    cancel: "Cancel container selection"
+    reload: "Reload configuration and messages"
+    edit: "Edit the item, amount, prices and enabled state in a menu"
+    settings: "Open the plugin settings editor"
+  usages:
+    create: "/%root% %create% <amount> <buy|-> <sell|-> [%admin%]"
+    list: "/%root% %list% [page] | /%root% %list% %admin% [page]"
+    info: "/%root% %info%"
+    status: "/%root% %status% [%on%|%off%]"
+    notification: "/%root% %notification% [%on%|%off%]"
+    remove: "/%root% %remove%"
+    cancel: "/%root% %cancel%"
+    reload: "/%root% %reload%"
+    edit: "/%root% %edit%"
+    settings: "/%root% %settings%"
+
+help:
+  header:
+    - "&8&m----------------------------------------"
+    - "&d&lAdvancedShops &8» &fCommands"
+    - ""
+  entry: "&d%usage% &8— &7%description%"
+  empty: "&7No commands are available to you."
+  footer:
+    - ""
+    - "&7Right-click &8» &fBuy  &8| &7Left-click &8» &fSell"
+    - "&7Sneak + left-click &8» &fSell one full stack"
+    - "&8&m----------------------------------------"
+
+chests:
+  block-is-not-shop: "&cThis block is not a shop."
+  not-your-shop: "&cYou cannot manage this shop."
+  limit: "&cYou have reached your shop limit &8(&f%limit%&8)&c."
+  declined: "&cPayment declined. &7The transaction was rolled back."
+  cant-create: "&cYou cannot create a shop here."
+  cant-create-admin: "&cYou do not have permission to create admin shops."
+  already-a-shop: "&cThis container is already a shop."
+  save-failed: "&cThe shop could not be saved. &7The change was not applied. Check the server log."
+  invalid-container: "&cSelect a chest or a barrel. &7Barrels require Minecraft 1.14 or newer."
+  hold-item: "&eHold the item you want to trade in your main hand."
+  invalid-amount: "&cThe amount must be a whole number from &f1 &cto &f2304&c."
+  invalid-price:
+    - "&cInvalid price. &7Use a positive amount up to 1,000,000,000 with at most two decimal places."
+    - "&7Use &f- &7or &f0 &7to disable one direction. The sell price cannot exceed the buy price."
+  created:
+    - "&aShop created."
+    - "&7Open storage to add stock."
+  admin-created:
+    - "&aAdmin shop created."
+    - "&7Stock and budget are unlimited."
+  removed: "&aShop removed. &7The container and its contents remain."
+  enabled: "&aShop opened."
+  disabled: "&eShop closed."
+  save-busy: "&eChanges are being saved. &7Please try again shortly."
+  invalid-creation-cost: "&cThe shop creation cost is invalid. &7Please contact an administrator."
+  creation-refund: "&7Refund for creating a store: &a%cost%"
+  creation-payment-failed: "&cThe shop creation payment was declined. &7No shop was created."
+  creation-refund-failed: "&cThe shop could not be saved and the payment refund failed. &7Please contact an administrator."
+
+signs:
+  disabled: "&cPay signs are disabled."
+  invalid-price: "&cEnter a positive price with at most two decimal places (maximum 1000000000)."
+  invalid-sign: "&cUse a dry wall or standing sign attached to a full solid block."
+  unknown-player: "&cThat player is unknown. Use the name of a player who has joined this server."
+  own-only: "&cYou can only create pay signs with your own name."
+  own-only-destroy: "&cYou can only destrpy pay signs with your own name."
+  front-only: "&cCreate the pay sign on the front of the sign."
+  protected: "&cRemove the pay sign first. Only its creator or an administrator can remove it."
+  created: "&aPay sign created. Right-click to pay and activate redstone."
+  removed: "&aPay sign removed."
+  busy: "&eThis pay sign is busy. Wait until the sign returns."
+  changed: "&cThis sign no longer matches its saved payment details. Contact an administrator."
+  self: "&cYou cannot pay yourself using a pay sign."
+  failed: "&cThe payment could not be completed. No redstone pulse was started."
+  signal-failed: "&cPayment completed, but redstone activation failed. Contact an administrator."
+  paid: "&7Paid &a%price% &7to &6%recipient%."
+
+trade:
+  stale: "&eThe shop changed before the trade completed. &7Nothing was charged; please try again."
+  save-busy: "&eThis shop is being saved. &7Please try again shortly."
+  closed: "&cThis shop is closed."
+  buy-disabled: "&cThis shop does not sell items."
+  sell-disabled: "&cThis shop does not buy items."
+  halted: "&cTrading is paused after a payment error. &7Please contact an administrator."
+  storage-unavailable: "&cThe shop container is unavailable."
+  economy-unavailable: "&cThe economy is unavailable. &7Please contact an administrator."
+  invalid-total: "&cThe stack price must be at least 0.01 and within the supported range. &7Use a normal click."
+  integer-price: "&cThis currency requires a price in whole points."
+  bought: "&aBought &f%amount%x %item% &afor &f%price%&a."
+  sold: "&aSold &f%amount%x %item% &afor &f%price%&a."
+  shop-no-stock: "&cThe shop does not have enough stock."
+  player-no-stock: "&cYou do not have enough matching items."
+  player-no-space: "&cThere is not enough space in your inventory."
+  shop-no-space: "&cThe shop storage is full."
+  failed: "&cA transaction error occurred. &7Trading is paused until an administrator checks the payment."
+
+notifications:
+  enabled: "&7Notifications for your shops are &aenabled."
+  disabled: "&7Notifications for your shops are &cdisabled."
+  save-failed: "&cCould not save your notification preference. &7Your previous setting remains active."
+  global-disabled: "&eNotifications are currently disabled by the server administrator."
+  chest-bought: "&a%customer% &7bought &f%amount%x %item% &7from your shop for &a%price%&7. &8[%location%&8]"
+  chest-sold: "&e%customer% &7sold &f%amount%x %item% &7to your shop for &e%price%&7. &8[%location%&8]"
+  sign-pay: "&a%player% &7paid you &f%price% &7at your sign shop. &8[%location%&8]"
+  pending:
+    header: "&6While you were away, your shops earned:"
+    item: "&7%amount%x %item% &8» &a%price%"
+    more: "&7...and %count% more item types."
+    shop-total: "&7From shop sales: &a%price%"
+    sign-total: "&7From pay signs: &a%price%"
+    total: "&fTotal earned: &a%price%"
+
+selection:
+  - "&eRight-click a chest or barrel within &f%seconds% seconds&e."
+  - "&7Use &f/%root% %cancel% &7to cancel."
+
+protection:
+  access: "&cOnly the owner or an administrator can open this storage."
+  break: "&cRemove the shop first using &f/%root% %remove%&c."
+  expand: "&cAn active shop cannot be expanded. &7Remove the shop first."
+
+labels:
+  open: "&aOpen"
+  closed: "&cClosed"
+  admin: "Admin shop"
+  player: "Player shop"
+  infinite: "Unlimited"
+  disabled: "&8Disabled"
+  unavailable: "&8Unavailable"
+  location: "%world% &8(&f%x%, %y%, %z%&8)"
+  money: "%amount% %currency%"
+
+info:
+  - "&8&m----------------------------------------"
+  - "&d&lShop &8» &f%owner%"
+  - "&7Type &8» &f%type% &8| %status%"
+  - "&7Item &8» &f%amount%x %item%"
+  - "&7You buy &8» &f%buy% &8| &7You sell &8» &f%sell%"
+  - "&7Stock &8» &f%stock%"
+  - "&7Location &8» &f%location%"
+  - "&8&m----------------------------------------"
+
+list:
+  title-own: "Your shops"
+  title-admin: "Admin shops"
+  header:
+    - "&8&m----------------------------------------"
+    - "&d&l%title% &8» &f%total% &7shops &8| &7Page &f%page%&7/&f%pages%"
+    - ""
+  entry:
+    - "&d%index%. &f%amount%x %item% &8| %status%"
+    - " &7Buy &8» &f%buy% &8| &7Sell &8» &f%sell%"
+    - " &7Location &8» &f%location%"
+  footer:
+    - "&8&m----------------------------------------"
+
+  next: "&7Next page &8» &f%command%"
+  empty: "&7You have no shops yet. &f/%root% %create% &7shows how to create one."
+  admin-empty: "&7There are no admin shops."
+  invalid-page: "&cThe page must be a positive whole number."
+  page-missing: "&cThat page does not exist. &7Available pages: &f1–%pages%&7."
+
+# All hologram text can be managed also in chests.yml
+hologram:
+  player: "&d&lSHOP &8• &f%owner%"
+  admin: "&c&lADMIN &f&lSHOP"
+  item: "&f%amount%x %item%"
+  buy: "&aBuy &8» &f%buy% %right-click%"
+  sell: "&eSell &8» &f%sell% %left-click%"
+  right-click: "&8[&7Right-click&8]"
+  left-click: "&8[&7Left-click&8]"
+  closed: "&c&lCLOSED"
+
+edit:
+  title: "&dEdit shop"
+  item-title: "&dSelect an item from your inventory"
+  price-title: "&dChoose a price to edit"
+  timeout: "&7Your time to change is up"
+  amount-prompt:
+    - "&7Enter the amount in the chat."
+    - "&7Type the result to save."
+  price-prompt:
+    - "&7Enter a price, or - to disable this direction."
+    - "&7Use at most two decimal places."
+    - "&7Type the result to save."
+  saved: "&aShop changes saved."
+  stale: "&eThis shop was changed or removed. &7Open the editor again."
+  buttons:
+    item:
+      name: "&dItem &8» &f%item%"
+      lore:
+        - "&7Click, then select an item from your inventory."
+        - "&7Only its pattern is copied; no items are taken."
+        - "&7Existing shop stock stays in the container."
+    amount:
+      name: "&dAmount &8» &f%amount%"
+      lore:
+        - "&7Items per normal trade."
+        - "&7Click to enter a new amount."
+    price:
+      name: "&dPrice"
+      lore:
+        - "&7Customer buys for: &f%buy%"
+        - "&7Customer sells for: &f%sell%"
+        - "&7Click to edit either price."
+    enabled:
+      name: "&dEnabled &8» %status%"
+      lore:
+        - "&7Click to open or close this shop."
+    buy:
+      name: "&aCustomer buys &8» &f%buy%"
+      lore:
+        - "&7Money paid by the customer for %amount% items."
+        - "&7Click to change; use - to disable."
+    sell:
+      name: "&eCustomer sells &8» &f%sell%"
+      lore:
+        - "&7Money paid to the customer for %amount% items."
+        - "&7Click to change; use - to disable."

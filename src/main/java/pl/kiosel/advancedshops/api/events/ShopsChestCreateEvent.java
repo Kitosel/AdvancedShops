@@ -2,14 +2,14 @@ package pl.kiosel.advancedshops.api.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
-import pl.kiosel.advancedshops.data.shop.Shop;
+import pl.kiosel.advancedshops.data.shop.ShopChest;
 
-public class ShopCreateEvent extends ShopEvent implements Cancellable {
+public class ShopsChestCreateEvent extends ShopsChestEvent implements Cancellable {
 
 	private boolean cancelled;
 
-	public ShopCreateEvent(Shop shop, Player player) {
-		super(shop, player);
+	public ShopsChestCreateEvent(ShopChest shopChest, Player player) {
+		super(shopChest, player);
 	}
 
 	@Override

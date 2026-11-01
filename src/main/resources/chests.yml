@@ -1,0 +1,70 @@
+# 0 = no limit.
+max-per-player: 20
+trade-cooldown-ms: 150
+
+# Cost for creating shop
+take-money-for-creating-shop: true
+
+# Cost per user or admin
+cost-user: 10.0
+cost-admin: 0.0
+
+# Should money be refunded after removing a shop?
+refund-shop-creation: false
+
+# RIGHT | LEFT
+buy-with-click: RIGHT
+
+# Remove the shop from storage if an explosion destroys its container.
+remove-when-explode: false
+
+# Maximum distance at which each player can see shop holograms and floating items.
+# Set to 0 to show displays at any distance.
+display-view-distance: 32
+
+# Display settings here
+# Requirements describe the SHOP, not individual viewers. All listed conditions must match.
+# Supported conditions (true/false): admin-shop, enabled, buy-enabled, sell-enabled.
+# Omit requirements or use {} to always match.
+#
+# Each line has either text (custom text) or message (a key from en_US.lang).
+# Add/remove/reorder list entries freely. enabled: false disables just that entry.
+# Placeholders: %owner%, %creator%, %item%, %amount%, %buy%, %sell%, %status%,
+# %type%, %id%, %world%, %x%, %y%, %z%, %location%, %right-click%, %left-click%.
+# Example custom line:
+#   - text: "&aBuy %amount%x %item% for %buy%"
+#     requirements:
+#       enabled: true
+#       buy-enabled: true
+
+hologram:
+  enabled: true
+  height: 2.6
+  line-spacing: 0.27
+  requirements: { }
+  # An empty list [] hides all text without disabling the item.
+  lines:
+    - message: "hologram.player"
+      requirements:
+        admin-shop: false
+    - message: "hologram.admin"
+      requirements:
+        admin-shop: true
+    - text: "&f%amount%x %item%"
+    - message: "hologram.buy"
+      requirements:
+        buy-enabled: true
+    - message: "hologram.sell"
+      requirements:
+        sell-enabled: true
+    - message: "hologram.closed"
+      requirements:
+        enabled: false
+
+item:
+  enabled: true
+  height: 1.0
+  requirements: { }
+  # To hide the item when the shop is closed, use:
+  # requirements:
+  #   enabled: true

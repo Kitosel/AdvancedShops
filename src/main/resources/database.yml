@@ -1,0 +1,15 @@
+# Supported: MARIADB, MYSQL, H2. shops.yml is not imported or deleted.
+Type: H2
+Host: localhost
+Port: 3306
+Database: database
+Username: username
+Password: password
+Pool-Size: 5
+SSL: false
+# Ścieżka względem folderu pluginu, bez rozszerzenia .mv.db. Tylko dla H2.
+File: database/shops
+# Limit czasu połączenia w milisekundach.
+Connection-Timeout-ms: 10000
+# Automatyczne tworzenie bazy MariaDB/MySQL wymaga uprawnienia CREATE.
+Create-Database: true

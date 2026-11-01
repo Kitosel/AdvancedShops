@@ -1,11 +1,27 @@
+# Can shop signs should be enabled
 enabled: true
+
 # The paid sign becomes a powered stone button, then returns. 20 ticks = 1 second.
 # Supported range: 1-1200 ticks. Use dry wall/standing signs on full solid blocks.
 pulse-ticks: 20
+
 # If it is true, no one can destroy the sign except its owner
 only-owner-can-destroy: true
 
-sign-header: "[Pay]"
-sgin-header-color: "GREEN"
-sign-price: "%amount%"
-sign-hint: "Right-click"
+# Can the owner use his own sign
+owner-can-pay-yourself: false
+
+# Can a player create a sign for another player?
+allow-create-for-others: true
+
+# To assign a color to a line, type ; and add the color name
+# Placeholders %player% and %amount% is MUST HAVE you cant remove it
+sign-lines:
+  # 1 line
+  header: "[Pay];GREEN"
+  # 2 line
+  player: "%player%"
+  # 3 line
+  price: "%amount%;YELLOW"
+  # 4 line
+  hint: "Right-click"

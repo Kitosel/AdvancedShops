@@ -1,0 +1,24 @@
+settings:
+  # Economy provider used by the plugin (for example Vault).
+  economy: Vault
+  currency: '$'
+  # Language file
+  language: en_US
+  # Checks if update for plugin is available
+  update-check: true
+
+blacklist:
+  enabled: false
+  worlds:
+    - "IHateShops"
+    - "world_the_end"
+
+notifications:
+  # Notify online owners after successful trades in player shops.
+  enabled: true
+  # Applies to players who have not used /shop notifications yet.
+  default-enabled: true
+  # Directions are from the customer's perspective.
+  customer-buys: true
+  customer-sells: true
+  customer-sign: true

@@ -1,28 +1,24 @@
 package pl.kiosel.advancedshops.api.events;
 
-import lombok.Getter;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
-import org.bukkit.event.HandlerList;
-import org.jetbrains.annotations.NotNull;
+import org.bukkit.event.Cancellable;
 import pl.kiosel.advancedshops.data.sign.ShopSign;
 
-public class ShopsSignEvent extends Event {
+public class ShopsSignCreateEvent extends ShopsSignEvent implements Cancellable {
 
-	private static final HandlerList handlers = new HandlerList();
+	private boolean cancelled;
 
-	@Getter
-	private final ShopSign shopSign;
-	@Getter
-	private final Player player;
-
-	public ShopsSignEvent(ShopSign shopSign, Player player) {
-		this.shopSign = shopSign;
-		this.player = player;
+	public ShopsSignCreateEvent(ShopSign shopSign, Player player) {
+		super(shopSign, player);
 	}
 
 	@Override
-	public @NotNull HandlerList getHandlers() {
-		return handlers;
+	public boolean isCancelled() {
+		return cancelled;
+	}
+
+	@Override
+	public void setCancelled(boolean cancel) {
+		this.cancelled = cancel;
 	}
 }
